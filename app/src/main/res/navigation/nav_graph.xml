@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.singleactivityapp.fragments.SplashFragment"
+        android:label="splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_HomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="com.example.singleactivityapp.fragments.PermissionsFragment"
+        android:label="permission"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        tools:layout="@layout/fragment_permissions">
+        <action
+            android:id="@+id/action_permissionsFragment_toHomeFramgent"
+            app:destination="@+id/HomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.singleactivityapp.fragments.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+</navigation>
